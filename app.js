@@ -176,30 +176,10 @@ document.querySelector("form").reset();
 
 
 }
-// ---------- REPORT ----------
-function loadReport() {
-let income = JSON.parse(localStorage.getItem("income")) || [];
-let expense = JSON.parse(localStorage.getItem("expense")) || [];
-    let totalIncome = income.reduce((a, b) => a + (b.amount || 0), 0);
-    let totalExpense = expense.reduce((a, b) => a + (b.amount || 0), 0);
 
-    document.getElementById("totalIncome").innerText = totalIncome;
-    document.getElementById("totalExpense").innerText = totalExpense;
-    document.getElementById("finalBalance").innerText = totalIncome - totalExpense;
 
-    let history = document.getElementById("history");
-    if (history) {
-        history.innerHTML = ""; // clear previous
 
-        income.forEach(i => {
-            history.innerHTML += `<li style="color:green">Income: ${i.title} - ₹${i.amount}</li>`;
-        });
 
-        expense.forEach(e => {
-            history.innerHTML += `<li style="color:red">Expense: ${e.title} - ₹${e.amount}</li>`;
-        });
-    }
-}
 // ---------- RECURRING PAYMENT ----------
 function addRecurringPayment(event) {
 // stop page refresh
@@ -216,27 +196,6 @@ let endDate = document.getElementById("endDate").value;
 let reminder = document.getElementById("reminder").value;
 let notes = document.getElementById("notes").value;
 
-// validation
-if ( !amount || !category || !frequency || !startDate) {
-    alert("Please fill all required fields!");
-    return;
-}
-
-// 2. create object
-let recurring = {
-    amount: Number(amount),
-    category: category,
-    frequency: frequency,
-    startDate: startDate,
-    endDate: endDate,
-    reminder: Number(reminder) || 0,
-    notes: notes
-};
-
-// 3. get previous data
-let recurringList = JSON.parse(localStorage.getItem("recurringPayments")) || [];
-
-// 4. add new payment
 recurringList.push(recurring);
 
 // 5. save back
@@ -249,3 +208,42 @@ document.querySelector("form").reset();
 
 
 }
+// ---------- REPORT ----------
+function loadReport() {
+
+    const user = JSON.parse(localStorage.getItem("user"));
+    const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    const incomes = JSON.parse(localStorage.getItem("incomes")) || [];
+    
+    if (!user) {
+        alert("No user data found!");
+        return;
+    }
+
+    console.log("User Data:", user, expenses);
+
+
+    let income = 0;
+
+    for (let i = 0; i < incomes.length; i++) {
+        income += parseFloat(incomes[i].amount) || 0;
+    }
+
+    // const income = ;
+    // incomes.reduce((total, item) => total + (parseFloat(item.amount) || 0), 0);
+
+    let totalExpenses = 0;
+
+    expenses.forEach(function(item) {
+        totalExpenses += parseFloat(item.amount) || 0;
+    });
+
+    const totalSavings = income - totalExpenses;
+
+    document.getElementById("income").innerText = income;
+    document.getElementById("expenses").innerText = totalExpenses;
+    document.getElementById("savings").innerText = totalSavings;
+}
+
+// Run when page loads
+window.onload = loadReport;

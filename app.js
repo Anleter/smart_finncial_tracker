@@ -182,32 +182,56 @@ document.querySelector("form").reset();
 
 // ---------- RECURRING PAYMENT ----------
 function addRecurringPayment(event) {
-// stop page refresh
-event.preventDefault();
+    event.preventDefault();
 
+    // Get values from form
+    const category = document.getElementById("category").value;
+    const frequency = document.getElementById("frequency").value;
+    const startDate = document.getElementById("startDate").value;
+    const endDate = document.getElementById("endDate").value;
+    const reminder = document.getElementById("reminder").value;
+    const notes = document.getElementById("notes").value;
 
-// 1. get values
+    // You forgot amount field in screenshot,
+    // so make sure you have this in HTML:
+    // <input type="number" id="amount" required>
 
-let amount = document.getElementById("amount").value;
-let category = document.getElementById("category").value;
-let frequency = document.getElementById("frequency").value;
-let startDate = document.getElementById("startDate").value;
-let endDate = document.getElementById("endDate").value;
-let reminder = document.getElementById("reminder").value;
-let notes = document.getElementById("notes").value;
+    const amountInput = document.getElementById("amount");
+    const amount = amountInput ? amountInput.value : 0;
 
-recurringList.push(recurring);
+    // Validation
+    if (!category || !frequency || !startDate || !amount) {
+        alert("Please fill all required fields!");
+        return;
+    }
 
-// 5. save back
-localStorage.setItem("recurringPayments", JSON.stringify(recurringList));
+    // Create object
+    const recurringPayment = {
+        category: category,
+        frequency: frequency,
+        startDate: startDate,
+        endDate: endDate || null,
+        reminder: reminder || 0,
+        notes: notes || "",
+        amount: parseFloat(amount)
+    };
 
-alert("Recurring Payment Saved!");
+    // Get existing recurrent payments
+    let recurrent = JSON.parse(localStorage.getItem("recurrent")) || [];
 
-// clear form
-document.querySelector("form").reset();
+    // Add new one
+    recurrent.push(recurringPayment);
 
+    // Save back to localStorage
+    localStorage.setItem("recurrent", JSON.stringify(recurrent));
 
+    alert("Recurring Payment Saved Successfully!");
+
+    // Optional: clear form
+    event.target.reset();
 }
+
+
 // ---------- REPORT ----------
 function loadReport() {
 
@@ -239,10 +263,34 @@ function loadReport() {
     });
 
     const totalSavings = income - totalExpenses;
+    const recurrent = JSON.parse(localStorage.getItem("recurrent")) || [];
+    const totalRecurring = recurrent.reduce((sum, r) => sum + parseFloat(r.amount || 0), 0);
+
+    // 4. Calculate total spent and savings
+    const totalSpent = totalExpenses + totalRecurring;
+    const totalSavingsincludingrecurrent = income - totalSpent;
 
     document.getElementById("income").innerText = income;
     document.getElementById("expenses").innerText = totalExpenses;
     document.getElementById("savings").innerText = totalSavings;
+    document.getElementById("recurrent").innerText = totalRecurring;
+    //document.getElementById("totalSpent").innerText = totalSpent;
+    document.getElementById("totalSavings").innerText = totalSavingsincludingrecurrent;
+
+// Calculate percentage
+let percentage = 0;
+
+if (income > 0) {
+    percentage = (totalExpenses / income) * 100;
+}
+
+if (percentage >= 90) {
+    alert("⚠ Warning! You have spent 90% or more of your income!");
+}
+else if (percentage >= 50) {
+    alert("⚠ Alert! You have spent 50% of your income.");
+}
+
 }
 
 // Run when page loads

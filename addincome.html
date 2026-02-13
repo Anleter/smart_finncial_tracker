@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Income</title>
+</head>
+<body>
+
+    <h2>Smart Financial Tracker</h2>
+    <h3>Add Income</h3>
+
+    <form action="add_income.php" method="post">
+
+        <label for="incomeSource">Income Source:</label><br>
+        <input type="text" id="incomeSource" name="incomeSource" 
+               placeholder="e.g. Salary, Freelancing, Gift" required><br><br>
+
+        <label for="amount">Amount (₹):</label><br>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="category">Category:</label><br>
+        <select id="category" name="category" required>
+            <option value="">--Select Category--</option>
+            <option value="salary">Salary</option>
+            <option value="business">Business</option>
+            <option value="freelance">Freelancing</option>
+            <option value="investment">Investment</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="notes">Notes (Optional):</label><br>
+        <textarea id="notes" name="notes" rows="4" cols="30"
+                  placeholder="Add any additional details"></textarea><br><br>
+
+        <button type="submit">Add Income</button>
+        <button type="reset">Clear</button>
+
+    </form>
+
+    <br>
+    <a href="dashboard.html">Back to Dashboard</a>
+
+</body>
+</html>

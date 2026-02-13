@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Report - Smart Financial Tracker</title>
+</head>
+<body>
+
+    <h2>Smart Financial Tracker</h2>
+    <h3>Monthly Financial Report</h3>
+
+    <!-- Select Month -->
+    <form action="report.php" method="post">
+        <label for="month">Select Month:</label>
+        <input type="month" id="month" name="month" required>
+        <button type="submit">View Report</button>
+    </form>
+
+    <hr>
+
+    <!-- Summary Section -->
+    <h3>Summary</h3>
+
+    <p><strong>Total Income:</strong> ₹ 50,000</p>
+    <p><strong>Total Expenses:</strong> ₹ 32,000</p>
+    <p><strong>Savings:</strong> ₹ 18,000</p>
+
+    <hr>
+
+    <!-- Category Breakdown -->
+    <h3>Expense Breakdown by Category</h3>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Category</th>
+            <th>Amount (₹)</th>
+        </tr>
+        <tr>
+            <td>Food</td>
+            <td>8,000</td>
+        </tr>
+        <tr>
+            <td>Transport</td>
+            <td>3,000</td>
+        </tr>
+        <tr>
+            <td>Shopping</td>
+            <td>7,000</td>
+        </tr>
+        <tr>
+            <td>Entertainment</td>
+            <td>4,000</td>
+        </tr>
+        <tr>
+            <td>Bills</td>
+            <td>10,000</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Insights Section -->
+    <h3>Smart Insights</h3>
+
+    <ul>
+        <li>You spent 16% of your income on Food.</li>
+        <li>Your highest spending category is Bills.</li>
+        <li>You saved 36% of your income this month.</li>
+    </ul>
+
+    <hr>
+
+    <a href="dashboard.html">Back to Dashboard</a>
+
+</body>
+</html>

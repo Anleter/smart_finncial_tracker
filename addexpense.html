@@ -1,5 +1,5 @@
 <h2>Add Expense</h2>
-<form action="app.js" method="POST">
+<form onsubmit="addExpense(event)">
 Amount: <input type="number" name="amount"><br><br>
 
 Category:
@@ -15,4 +15,5 @@ Note: <input type="text" name="note"><br><br>
 Date: <input type="date" name="date"><br><br>
 
 <input type="submit" value="Save">
+<script src="app.js"></script>
 </form>

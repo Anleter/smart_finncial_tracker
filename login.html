@@ -1,6 +1,8 @@
 <h2>Login</h2>
-<form action="dash" method="POST">
-Email: <input type="email" name="email"><br><br>
-Password: <input type="password" name="password"><br><br>
+<form  onsubmit="loginUser(event)">
+Email: <input type="email" name="loginEmail"><br><br>
+Password: <input type="password" name="loginPassword"><br><br>
 <input type="submit" value="Login">
+ <p>dashboard <a href="dashboard.html">Go to Dashboard</a></p>
+<script src="app.js"></script>
 </form>

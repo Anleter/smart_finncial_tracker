@@ -9,11 +9,7 @@
     <h2>Smart Financial Tracker</h2>
     <h3>Set Up Recurring Payment</h3>
 
-    <form action="app.js" method="post">
-
-        <label for="paymentName">Payment Name:</label><br>
-        <input type="text" id="paymentName" name="paymentName"
-               placeholder="e.g. Netflix, Rent, EMI" required><br><br>
+    <form onsubmit="addRecurringPayment(event)">
 
         <label for="amount">Amount (₹):</label><br>
         <input type="number" id="amount" name="amount" required><br><br>
@@ -59,6 +55,6 @@
 
     <br>
     <a href="dashboard.html">Back to Dashboard</a>
-
+<script src="app.js"></script>
 </body>
 </html>

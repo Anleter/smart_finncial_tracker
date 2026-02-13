@@ -9,7 +9,7 @@
     <h2>Smart Financial Tracker</h2>
     <h3>Create Account</h3>
 
-    <form action="login.html" method="post">
+    <form onsubmit="registerUser(event)">
 
         <label for="fullname">Full Name:</label><br>
         <input type="text" id="fullname" name="fullname" required><br><br>
@@ -28,6 +28,6 @@
     </form>
 
     <p>Already have an account? <a href="login.html">Login here</a></p>
-
+<script src="app.js"></script>
 </body>
 </html>

@@ -1,11 +1,12 @@
 
-💰 Smart Financial Tracker
+💰 FINTRACK
 
 A simple, clean, and user-friendly web application that helps users track income, expenses, recurring payments, and savings efficiently.
-<br>
+<br><br>
 TEAM NAME:CODE-X
 <br>
 TEAM MEMBERS
+<br>
 Anlet E R - RIT Kottayam
 Fida Noushad CT - RIT Kottayam
 <br>

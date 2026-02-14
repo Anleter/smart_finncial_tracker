@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Recurring Payments - Smart Financial Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
 
     <h2>Smart Financial Tracker</h2>
     <h3>Set Up Recurring Payment</h3>
@@ -34,19 +36,13 @@
             <option value="yearly">Yearly</option>
         </select><br><br>
 
-        <label for="startDate">Start Date:</label><br>
-        <input type="date" id="startDate" name="startDate" required><br><br>
-
-        <label for="endDate">End Date (Optional):</label><br>
-        <input type="date" id="endDate" name="endDate"><br><br>
+      
 
         <label for="reminder">Reminder Before (Days):</label><br>
         <input type="number" id="reminder" name="reminder"
                placeholder="e.g. 2 days before"><br><br>
 
-        <label for="notes">Notes (Optional):</label><br>
-        <textarea id="notes" name="notes" rows="4" cols="30"
-                  placeholder="Additional details"></textarea><br><br>
+       
 
         <button type="submit">Save Recurring Payment</button>
         <button type="reset">Clear</button>
@@ -56,5 +52,6 @@
     <br>
     <a href="dashboard.html">Back to Dashboard</a>
 <script src="app.js"></script>
+</div>
 </body>
 </html>

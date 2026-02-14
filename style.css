@@ -1,0 +1,179 @@
+/* ===============================
+   Smart Financial Tracker
+   Calm & Stylish Common CSS
+================================= */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #eef2f7, #dfe9f3);
+    min-height: 100vh;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #1b2d3f;
+    text-transform: uppercase;
+    
+
+}
+
+/* Paragraph */
+p {
+    margin: 10px 0;
+}
+
+/* Forms */
+form {
+    margin-top: 20px;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Inputs, Select, Textarea */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #dcdde1;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Input Focus */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #5dade2;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(93, 173, 226, 0.2);
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="reset"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+/* Primary Button */
+button,
+input[type="submit"] {
+    background-color: #5dade2;
+    color: white;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #3498db;
+}
+
+/* Reset Button */
+input[type="reset"] {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+input[type="reset"]:hover {
+    background-color: #d5dbdb;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #5dade2;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard Specific */
+nav ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f4f6f7;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #eaf2f8;
+}
+
+/* Financial Summary Box */
+.summary-box {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .container {
+        padding: 25px;
+    }
+}

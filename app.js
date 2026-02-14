@@ -187,10 +187,8 @@ function addRecurringPayment(event) {
     // Get values from form
     const category = document.getElementById("category").value;
     const frequency = document.getElementById("frequency").value;
-    const startDate = document.getElementById("startDate").value;
-    const endDate = document.getElementById("endDate").value;
     const reminder = document.getElementById("reminder").value;
-    const notes = document.getElementById("notes").value;
+
 
     // You forgot amount field in screenshot,
     // so make sure you have this in HTML:
@@ -200,7 +198,7 @@ function addRecurringPayment(event) {
     const amount = amountInput ? amountInput.value : 0;
 
     // Validation
-    if (!category || !frequency || !startDate || !amount) {
+    if (!category || !frequency || !amount) {
         alert("Please fill all required fields!");
         return;
     }
@@ -209,10 +207,7 @@ function addRecurringPayment(event) {
     const recurringPayment = {
         category: category,
         frequency: frequency,
-        startDate: startDate,
-        endDate: endDate || null,
         reminder: reminder || 0,
-        notes: notes || "",
         amount: parseFloat(amount)
     };
 

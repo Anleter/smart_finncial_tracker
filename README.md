@@ -142,5 +142,6 @@ For educational and personal use.
 * direct linking with google pay or similar apps
 <br>
 <br>
-#❤️ Acknowledgement
+❤️ Acknowledgement
+<br>
 *Tinkerspace Rit

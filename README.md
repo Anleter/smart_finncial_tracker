@@ -56,28 +56,41 @@ or double-click the file.
 
 
 ## 📸 Screenshots
+### 0️⃣ index page
+![Login Screenshot](./screenshots/page1.png)
+### 1️⃣ register Page
+![Login Screenshot](./screenshots/page2.png)
+### 2️⃣ Login Page
+![Login Screenshot](./screenshots/page3.png)
+### 3️⃣ Dashboard Page
+![Dashboard Screenshot](./screenshots/page4.png)
+### 4️⃣ Add Income Page
+![Add Income Screenshot](./screenshots/page5.png)
+![Add Income Screenshot](./screenshots/page8.png)
+### 5️⃣ Add expense page
 
-### 1️⃣ Login Page
+![Report Screenshot](./screenshots/page6.png)
+![Report Screenshot](./screenshots/page9.png)
 
-![Login Screenshot](screenshots/login.png)
+### 6️⃣ Add recurrent page
+![Report Screenshot](./screenshots/page7.png)
+### 7️⃣ Report Page
+![Report Screenshot](./screenshots/page10.png)
 
-### 2️⃣ Dashboard Page
+![Report Screenshot](./screenshots/page11.png) 
 
-![Dashboard Screenshot](screenshots/dashboard.png)
+### 8️⃣logout Page
 
-### 3️⃣ Add Income Page
+![Report Screenshot](./screenshots/page12.png)
 
-![Add Income Screenshot](screenshots/addincome.png)
 
-### 4️⃣ Report Page
 
-![Report Screenshot](screenshots/report.png)
 
 ---
 
 ## 🎥 Demo Video
 
-Watch the demo here:
+[![Watch the video](https://drive.google.com/file/d/1gqtFTNZFxrnFklqp_UpxrJAmP2LIbPYC/view?usp=drivesdk)](https://drive.google.com/file/d/1gqtFTNZFxrnFklqp_UpxrJAmP2LIbPYC/view?usp=drivesdk)
 
 
 ## 🏗 Architecture Diagram

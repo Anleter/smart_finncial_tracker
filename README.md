@@ -2,10 +2,13 @@
 💰 Smart Financial Tracker
 
 A simple, clean, and user-friendly web application that helps users track income, expenses, recurring payments, and savings efficiently.
+<br>
 TEAM NAME:CODE-X
+<br>
 TEAM MEMBERS
 Anlet E R - RIT Kottayam
 Fida Noushad CT - RIT Kottayam
+<br>
 
 📌 Project Description
 

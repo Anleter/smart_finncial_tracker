@@ -1,0 +1,10 @@
+# Smart Financial Tracker
+
+# This project is built using:
+# - HTML5
+# - CSS3
+# - JavaScript
+# - PHP (Optional)
+# - MySQL (Optional)
+
+# No Python dependencies required.
